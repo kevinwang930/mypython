@@ -1,0 +1,6 @@
+pytest
+pyside2
+sqlalchemy
+pymysql
+jupyterlab
+pywin32

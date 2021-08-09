@@ -1,0 +1,8 @@
+pytest
+sqlalchemy
+pymysql
+jupyterlab
+pywin32
+matplotlib-base
+pandas
+openpyxl

@@ -1,0 +1,9 @@
+{
+    "code-runner.executorMap": {
+        // "cpp": "cls&&clang++ $fileName -o code-$fileNameWithoutExt.exe &&code-$fileNameWithoutExt.exe"
+        "cpp": "cls && clang++ $fileName -o a.exe &&.\\a.exe",
+        "python": "gdb $pythonPath && run $fullFileName",
+        "c": "clang $fileName -o a.exe &&.\\a.exe",
+    },
+    "python.pythonPath": "D:\\miniconda3\\envs\\py38\\python.exe"
+}
