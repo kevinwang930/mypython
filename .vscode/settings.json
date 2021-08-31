@@ -1,6 +1,13 @@
 {
     "python.pythonPath": "D:\\miniconda3\\envs\\py39\\python.exe",
     "python.formatting.provider": "black",
-    "restructuredtext.confPath": "${workspaceFolder}\\sphinx\\docs\\source",
-    "restructuredtext.languageServer.disabled": true
+    // "restructuredtext.confPath": "${workspaceFolder}\\sphinx\\docs\\source",
+    // "restructuredtext.languageServer.disabled": true
+    "python.testing.pytestArgs": [
+        "pytest"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestPath": "pytest"
 }

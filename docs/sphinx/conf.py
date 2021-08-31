@@ -56,8 +56,14 @@ html_theme = 'alabaster'
 
 latex_engine = 'xelatex'
 latex_elements = {
-    'extraclassoptions': 'openany'
+    'extraclassoptions': 'openany',
+    'preamble' : r'''
+        \usepackage{ctex}
+        ''',
+    # 'maketitle':''
 }
+latex_toplevel_sectioning = 'section'
+
 
 
 # pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'kevin'),]
