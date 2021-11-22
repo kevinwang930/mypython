@@ -1,7 +1,8 @@
 class base:
     pass
 
+
 a = base()
-b = a 
+b = a
 
 print(a == b)

@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "D:\\miniconda3\\envs\\py39\\python.exe",
+    "python.pythonPath": "/home/kevin/miniconda3/envs/py39/bin/python",
     "python.formatting.provider": "black",
     // "restructuredtext.confPath": "${workspaceFolder}\\sphinx\\docs\\source",
     // "restructuredtext.languageServer.disabled": true
