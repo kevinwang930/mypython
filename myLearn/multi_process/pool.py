@@ -1,10 +1,14 @@
+import os
 from multiprocessing import Pool
 from time import time, sleep
+from datetime import datetime
+def f(folder):
 
-def f(x):
-    sleep(2)
-    y = x*x
-    print(y)
+    path = os.path.join('/code/git',folder)
+    out =os.popen(f'cd {path}&&git status')
+    # print(out.read())
+    sleep(3)
+    print(datetime.now())
     # return y
 
 
@@ -15,8 +19,6 @@ def f(x):
 # print(f'time elapsed {t1}')
 
 if __name__ == '__main__':
-    tp0 = time()
-    with Pool(3) as p:
-        p.map(f, [1, 2, 3])
-    tp1 = time() - tp0
-    print(f'elapsed time {tp1}')
+    with Pool(5) as p:
+        p.map(f, os.listdir('/code/git'))
+
