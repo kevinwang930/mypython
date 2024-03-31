@@ -1,0 +1,6 @@
+import base64
+import struct
+
+encoded_data = "yv66vgAAADcAngoAHwBFCgBGAEcSAAAASwsATABNCgBGAE4HAE8KAAYAUAoAUQBSCABTCABUCABVCABWCABXCgBYAFkLAFoAWwsAXABdCgASAF4HAF8JAGAAYQgAYgoAYwBkCgBjAGULAFwAZgoABgBnCgAGAGgIAGkHAGoKABsARQoAGwBrCgAbAGwHAG0BAA=="
+decoded_data = base64.b64decode(encoded_data)
+print(decoded_data)

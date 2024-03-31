@@ -1,0 +1,10 @@
+services:
+  composehello:
+    user: 1000:1000
+    volumes:
+      - ./app:/opt/app:z
+    build:
+      context: ./app
+
+
+

@@ -1,13 +1,17 @@
-import requests
+import socket
+import ssl
 
-# URL to make a request to
-url = 'https://localhost:12345'
+context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='cert/ca.pem')
+context.load_cert_chain(certfile="cert/client/cert.pem", keyfile="cert/client/key.pem", password="hello")
 
-# Path to the generated certificate file
-cert_file = 'cert/cert.pem'
+conn = context.wrap_socket(socket.socket(socket.AF_INET), server_hostname='localhost')
+conn.connect(('localhost', 8443))
 
-# Make a GET request with the certificate
-response = requests.get(url, cert=cert_file)
+print("SSL established. Peer: {}".format(conn.getpeercert()))
+print("Sending: 'Hello, server!'")
+conn.send(b"Hello, server!")
+buf = conn.recv(1024)
+print("Received from server: {}".format(buf))
 
-# Print the response
-print(response.text)
+print("Closing connection")
+conn.close()
