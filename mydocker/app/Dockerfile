@@ -4,4 +4,4 @@ RUN dnf -y install python
 
 COPY . /opt/source-code
 
-ENTRYPOINT FLASK_APP=/opt/source-code/hello.py python
+CMD ["python","/opt/source-code/hello.py"]
